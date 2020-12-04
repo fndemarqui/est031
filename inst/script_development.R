@@ -10,6 +10,8 @@ devtools::install()
 devtools::document()
 devtools::load_all()
 
-
+usethis::use_git_ignore("inst/script_carros.R")
+usethis::use_git_ignore("inst/script_enem2019.R")
+usethis::use_git_ignore("inst/script_development.R")
 
 

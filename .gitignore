@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+inst/script_carros.R
+inst/script_enem2019.R
+inst/script_development.R

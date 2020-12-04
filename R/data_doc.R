@@ -28,3 +28,35 @@
 #'
 NULL
 
+
+
+#' ENEM 2019 em Belo Horizonte
+#'
+#' @name enem2019bh
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Conjunto de dados com diversas variáveis relativas à prova do ENEM aplicada em 2019 na cidade de Belo Horizonte.
+#'
+#' @format Tibble com 87365 linhas e 14 variáveis:
+#' \describe{
+#'   \item{idade}{em anos}
+#'   \item{sexo}{F - feminino, M - masculino}
+#'   \item{est_civil}{estado civil: NI (não informado), solteiro, divorciado, casado ou viúvo}
+#'   \item{raca}{branco, pardo, negro, amarelo, indígina ou ND (não determinado)}
+#'   \item{escola}{escola de origem: não respondeu, pública, privada ou exterior}
+#'   \item{lingua_estr}{lingua da prova de lingua estrangeira: 0 - inglês, 1 espanhol}
+#'   \item{nota_CN}{nota obtida na prova de ciências naturais}
+#'   \item{nota_CH}{nota obtida na prova de ciências humanas}
+#'   \item{nota_LC}{nota obtida na prova de linguas e códigos}
+#'   \item{nota_MT}{nota obtida na prova de matemática}
+#'   \item{nota_RD}{nota obtida na prova de redação}
+#'   \item{ESC_pai}{pai possui ensino superior completo? não sabe, sim, não}
+#'   \item{ESC_mae}{mae possui ensino superior completo? não sabe, sim, não}
+#'   \item{renda_fam}{renda familiar mensal:A -  0 a 1.5K$, B - 1.5K a 3K, C - 3K a 6K, D - 6K a 12K, E - acima de 12K }
+#' }
+
+#' @source Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados).
+#'
+NULL
+
