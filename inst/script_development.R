@@ -15,3 +15,6 @@ usethis::use_git_ignore("inst/script_enem2019.R")
 usethis::use_git_ignore("inst/script_development.R")
 
 
+
+nutricao <- read.table("inst/dados.txt", header = TRUE)
+nutricao

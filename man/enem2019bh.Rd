@@ -20,7 +20,7 @@ Tibble com 87365 linhas e 14 variáveis:
   \item{nota_RD}{nota obtida na prova de redação}
   \item{ESC_pai}{pai possui ensino superior completo? não sabe, sim, não}
   \item{ESC_mae}{mae possui ensino superior completo? não sabe, sim, não}
-  \item{renda_fam}{renda familiar mensal: A -  0 a 1.5K$, B - 1.5K a 3K, C - 3K a 6K, D - 6K a 12K, E - acima de 12K }
+  \item{renda_fam}{renda familiar mensal:A -  0 a 1.5K$, B - 1.5K a 3K, C - 3K a 6K, D - 6K a 12K, E - acima de 12K }
 }
 }
 \source{
