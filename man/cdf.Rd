@@ -7,20 +7,25 @@
 cdf(
   x,
   Fx = NULL,
+  type = c("discrete", "continuous"),
   dist = c("binom", "pois", "geom", "unif", "exp", "norm"),
   ...
 )
 }
 \arguments{
-\item{x}{a numeric vector with the observed values of the random variable.}
+\item{x}{a numeric vector with the observed values of the random variable}
 
-\item{Fx}{if NULL (default), then Fx is computed based one of the implemented distributions (currently the binomial, poisson and geometric distributions for discrete random variables, or uniform, exponential and normal distribution for continuous random variables); otherwise the user must pass the values of Fx.}
+\item{Fx}{if NULL (default), then Fx is computed using one of the implemented distributions (see description of the dist argument below); otherwise the user must pass the values of Fx}
 
-\item{...}{further arguments passed to or from other methods.}
+\item{type}{type of random variable; either discrete (default) or continuous; this argument is only necessary when Fx is passed by the user}
+
+\item{dist}{optional; name of the distribution (currently the binomial, poisson and geometric distributions for discrete random variables, or uniform, exponential and normal distribution for continuous random variables)}
+
+\item{...}{further arguments passed to or from other methods}
 }
 \value{
-the desired plot of the cumulative distribution function.
+the desired plot of the cumulative distribution function
 }
 \description{
-This function plots the cumulative distribution function (c.d.f) of a random variable.
+This function plots the cumulative distribution function (c.d.f) of a random variable
 }
