@@ -6,6 +6,8 @@ library(est031)
 
 glimpse(carros)
 
+# 1 milha = 1.609343 km
+
 
 # 1 milha = 1760 metros
 
