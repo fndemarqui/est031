@@ -6,6 +6,7 @@ Authors@R: person(given = "Fabio", family = "Demarqui", email = "fndemarqui@est.
 Description: Bancos de dados utilizados na disciplina Estatística e Probabilidades (EST031).
 License: GPL (>= 2)
 Depends:
+    ggplot2,
     R (>= 2.10)
 Suggests: tidyverse  
 Encoding: UTF-8
