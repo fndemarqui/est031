@@ -2,3 +2,11 @@
 
 export(cdf)
 export(cv)
+export(dgeom2)
+export(dnbinom2)
+export(pgeom2)
+export(pnbinom2)
+export(qgeom2)
+export(qnbinom2)
+export(rgeom2)
+export(rnbinom2)
