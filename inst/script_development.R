@@ -6,12 +6,22 @@
 # git commit -m "meu primeiro comentario"
 # git push -u origin master
 
+#----------------------------------
+# rodar apenas uma vez:
+usethis::use_agpl3_license()
+usethis::use_readme_rmd()
+usethis::use_pkgdown()
+#----------------------------------
+
 devtools::install()
 devtools::document()
 devtools::load_all()
 
 devtools::build()
 devtools::build_manual()
+
+devtools::build_readme()
+devtools::build_site()
 
 
 usethis::use_git_ignore("inst/script_carros.R")

@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# est031
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Conjunto de dados e funções utilizados na disciplina Estatística e Probabilidades.
+
+## Installation
+
+Você pode instalar a versão de desenvolvimento do pacote est031 a partir do [GitHub](https://github.com/) da seguinte forma: 
+
+
+``` r
+# install.packages("devtools")
+devtools::install_github("fndemarqui/est031")
+```
+## Exemplo
+
+
+
+```{r message = FALSE}
+
+# anexando os pacotes:
+library(est031)
+library(tidyverse)
+
+#carregando/espiando os dados:
+data(enem2019bh)    
+glimpse(enem2019bh)
+```
+
