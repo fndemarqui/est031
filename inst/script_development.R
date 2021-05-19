@@ -30,5 +30,6 @@ usethis::use_git_ignore("inst/script_development.R")
 
 
 
-nutricao <- read.table("inst/dados.txt", header = TRUE)
-nutricao
+resistencia <- read.table("inst/dados.txt", header = TRUE)
+resistencia
+usethis::use_data(resistencia)

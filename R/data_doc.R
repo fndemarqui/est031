@@ -60,3 +60,22 @@ NULL
 #'
 NULL
 
+
+#' Resistência à compressão.
+#'
+#' @name resistencia
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 6.4 do livro \insertCite{2015Montgomery}{est031}. Dados referentes à resistência à compressão (em psi) de 80 corpos de prova de liga de alumínio-lítio.
+#'
+#' @format Data.frame com 80 linhas e uma variável:
+#' \describe{
+#'   \item{resistência}{resistência à compressão (em psi) de 80 corpos de prova de liga de alumínio-lítio.}
+#' }
+#' @references
+#'
+#' \insertRef{2015Montgomery}{est031}
+#'
+NULL
+
