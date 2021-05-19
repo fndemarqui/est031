@@ -79,3 +79,27 @@ NULL
 #'
 NULL
 
+
+#' Hábito nutricional de um grupo de estudantes.
+#'
+#' @name nutricao
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Um grupo de alunos do curso de nutrição da UFF responderam um questionário sobre seus hábitos alimentares em um trabalho de classe passado pelo professor de estatística.
+#'
+#' @format Data.frame com 44 linhas e 9 variávees:
+#' \describe{
+#'   \item{sexo}{M - masculino; F - feminino}
+#'   \item{idade}{idade em anos}
+#'   \item{peso}{peso em quilos}
+#'   \item{altura}{altura e metros}
+#'   \item{alimentação}{possui uma alimentação saudável? (sim; não)}
+#'   \item{frutas}{número médio porções de frutas consumidas por dia}
+#'   \item{vegetais}{número médio de porções de vegetais consumidas por dia}
+#'   \item{sedentarismo}{leva uma vida sedentária? (sim; não)}
+#'   \item{tempo}{tempo médio (em horas) semanal dedicado à prática de atividades físicas}
+#' }
+#'
+NULL
+
