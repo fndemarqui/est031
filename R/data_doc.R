@@ -88,6 +88,7 @@ NULL
 #' @keywords datasets
 #' @description Um grupo de alunos do curso de nutrição da UFF responderam um questionário sobre seus hábitos alimentares em um trabalho de classe passado pelo professor de estatística.
 #'
+
 #' @format Data.frame com 44 linhas e 9 variáveis:
 #' \describe{
 #'   \item{sexo}{M - masculino; F - feminino}
