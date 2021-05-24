@@ -15,7 +15,7 @@ Data.frame com 44 linhas e 9 variáveis:
   \item{frutas}{número médio porções de frutas consumidas por dia}
   \item{vegetais}{número médio de porções de vegetais consumidas por dia}
   \item{sedentarismo}{leva uma vida sedentária? (sim; não)}
-  \item{tempo}{tempo médio (em horas) semanal dedicado à prática de atividades físicas}
+  \item{tempo}{tempo médio (em horas) semanal dedicado à prática de atividades físicas: até duas horas, entre 2 e 5 horas, entre 5 e 10 horas, mais de 10 horas}
 }
 }
 \description{
