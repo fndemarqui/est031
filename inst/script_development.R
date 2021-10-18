@@ -6,11 +6,11 @@
 # git commit -m "meu primeiro comentario"
 # git push -u origin master
 
-#----------------------------------
-# rodar apenas uma vez:
-usethis::use_agpl3_license()
-usethis::use_readme_rmd()
-usethis::use_pkgdown()
+# #----------------------------------
+# # rodar apenas uma vez:
+# usethis::use_agpl3_license()
+# usethis::use_readme_rmd()
+# usethis::use_pkgdown()
 #----------------------------------
 
 devtools::install()
@@ -32,4 +32,4 @@ usethis::use_git_ignore("inst/script_development.R")
 
 # nutricao <- read.table("inst/dados.txt", header = TRUE)
 # nutricao
-usethis::use_data(nutricao, overwrite = TRUE)
+# usethis::use_data(nutricao, overwrite = TRUE)
