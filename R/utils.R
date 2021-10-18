@@ -28,6 +28,18 @@ cv <- function(x, perc = TRUE, ...){
 #' @param dist optional; name of the distribution (currently the binomial, poisson and geometric distributions for discrete random variables, or uniform, exponential and normal distribution for continuous random variables)
 #' @param ... further arguments passed to or from other methods
 #' @return the desired plot of the cumulative distribution function
+#'
+#' @examples
+#' \donttest{
+#'
+#' # binomial:
+#' x <- 0:10
+#' cdf(x, dist = "binom", size = 10, prob = 0.7)
+#'
+#' # normal:
+#' x <- rnorm(100, mean = 10, sd = 2)
+#' cdf(x, dist = "norm", mean = 10, sd = 2)
+#' }
 
 cdf <- function(x, Fx = NULL, type = c("discrete", "continuous"),
                 dist = c("binom", "pois", "geom","unif", "exp", "norm"), ...){

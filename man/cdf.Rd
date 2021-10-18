@@ -29,3 +29,15 @@ the desired plot of the cumulative distribution function
 \description{
 This function plots the cumulative distribution function (c.d.f) of a random variable
 }
+\examples{
+\donttest{
+
+# binomial:
+x <- 0:10
+cdf(x, dist = "binom", size = 10, prob = 0.7)
+
+# normal:
+x <- rnorm(100, mean = 10, sd = 2)
+cdf(x, dist = "norm", mean = 10, sd = 2)
+}
+}
