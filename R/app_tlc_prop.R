@@ -46,6 +46,7 @@ app_tcl_prop <- function(...){
     output$hist <- renderPlot({
       ggplot(tb(), aes(x = z)) +
         geom_histogram(aes(y=..density..), bins = 30) +
+        geom_histogram(aes(y=..density..)) +
         stat_function(fun=dnorm, color = "blue") +
         xlim(c(-5,5))
     })
