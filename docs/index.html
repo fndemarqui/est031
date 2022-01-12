@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">est031</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -59,31 +55,31 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="est031" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#est031" class="anchor"></a>est031</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="est031">est031<a class="anchor" aria-label="anchor" href="#est031"></a>
+</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>Conjunto de dados e funções utilizados na disciplina Estatística e Probabilidades.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>Você pode instalar a versão de desenvolvimento do pacote est031 a partir do <a href="https://github.com/">GitHub</a> da seguinte forma:</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>Você pode instalar a versão de desenvolvimento do pacote est031 a partir do <a href="https://github.com/" class="external-link">GitHub</a> da seguinte forma:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"fndemarqui/est031"</span><span class="op">)</span></code></pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"fndemarqui/est031"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="exemplo" class="section level2">
-<h2 class="hasAnchor">
-<a href="#exemplo" class="anchor"></a>Exemplo</h2>
+<div class="section level2">
+<h2 id="exemplo">Exemplo<a class="anchor" aria-label="anchor" href="#exemplo"></a>
+</h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># anexando os pacotes:</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">est031</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">est031</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 
 <span class="co">#carregando/espiando os dados:</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span>    
-<span class="fu">glimpse</span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span>    
+<span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 87,365</span>
 <span class="co">#&gt; Columns: 14</span>
 <span class="co">#&gt; $ idade       &lt;dbl&gt; 24, 17, 19, 19, 18, 24, 20, 30, 17, 19, 27, 32, 21, 20, 20…</span>
@@ -106,29 +102,42 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
 <li><small>AGPL (&gt;= 3)</small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing est031</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Fabio Demarqui <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Fabio Demarqui.</p>
+  <p></p>
+<p>Developed by Fabio Demarqui.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -136,6 +145,8 @@
 
   
 
+
+  
 
   </body>
 </html>

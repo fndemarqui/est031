@@ -1,16 +1,18 @@
 Package: est031
 Type: Package
 Title: Estatística e Probabilidades (EST031)
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: person(given = "Fabio", family = "Demarqui", email = "fndemarqui@est.ufmg.br", role = c("aut", "cre"))
 Description: Bancos de dados utilizados na disciplina Estatística e Probabilidades (EST031).
 License: AGPL (>= 3)
 Depends:
+    dplyr,
     ggplot2,
+    shiny,
     R (>= 4.0)
 Imports: 
   ggpubr,
-  Rdpack    
+  Rdpack
 Suggests: tidyverse  
 Encoding: UTF-8
 LazyData: true
