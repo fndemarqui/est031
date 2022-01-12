@@ -28,8 +28,9 @@ usethis::use_git_ignore("inst/script_carros.R")
 usethis::use_git_ignore("inst/script_enem2019.R")
 usethis::use_git_ignore("inst/script_development.R")
 
+usethis::use_build_ignore("app_tlc_prop.R")
 
 
-# nutricao <- read.table("inst/dados.txt", header = TRUE)
+furtos <- read.table("inst/dados.txt", header = TRUE)
 # nutricao
-# usethis::use_data(nutricao, overwrite = TRUE)
+usethis::use_data(furtos, overwrite = TRUE)
