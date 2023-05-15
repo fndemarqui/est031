@@ -1,0 +1,119 @@
+---
+title: "Explorando os resultados da mega-sena"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explorando os resultados da mega-sena}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+## Número de ganhadores e premiações
+
+```{r, message=FALSE}
+library(est031)
+library(tidyverse)
+library(lubridate)
+library(plotly)
+library(scales)
+
+ganhadores <- download_megasena("ganhadores")
+glimpse(ganhadores)
+
+
+ganhadores %>%
+  group_by(acertos) %>%
+  summarise(
+    ganhadores = mean(ganhadores),
+    premio = mean(premio)
+  )
+
+sena <- ganhadores %>%
+  filter(acertos == "sena") %>%
+  select(acumula)
+
+fct_count(sena$acumula, prop = TRUE)
+
+
+sena <- ganhadores %>%
+  filter(acertos == "sena")
+
+sena %>%
+  arrange(desc(ganhadores)) %>%
+  head(n=10)
+
+
+
+datas <- as_date(paste0(1996:2022, "-12-31"))
+datas
+
+virada <- sena %>%
+  filter(data %in% datas) %>%
+  mutate(
+    ano = year(data)
+  )
+
+p1 <- ggplot(virada, aes(x = ano, y = ganhadores)) +
+  geom_point() + 
+  geom_path() +
+  labs(x = "ano", y = "número de ganhadores")
+ggplotly(p1)  
+
+
+p2 <- ggplot(virada, aes(x = ano, y = premio)) +
+  geom_point() + 
+  geom_path() +
+  labs(x = "ano", y = "número de ganhadores") +
+  scale_y_continuous(labels = label_number(suffix = " M", scale = 1e-6)) 
+ggplotly(p2)
+
+```
+
+## Dezenas sorteadas
+
+```{r, message=FALSE}
+library(est031)
+library(tidyverse)
+library(lubridate)
+library(plotly)
+
+dezenas <- download_megasena("dezenas")
+glimpse(dezenas)
+
+fct_count(dezenas$dezenas, prop = TRUE) %>%
+  arrange(desc(n))
+
+
+ggplot(dezenas, aes(x=dezenas)) +
+  geom_bar()
+
+
+dezenas <- dezenas %>%
+  mutate(
+    dezenas2 = fct_collapse(dezenas,
+        "01-10" = c(paste0("0", 1:9),10),
+        "11-20" = as.character(11:20),
+        "21-30" = as.character(21:30),
+        "31-40" = as.character(31:40),
+        "41-50" = as.character(41:50),
+        "51-60" = as.character(51:60) 
+    ) 
+  )
+glimpse(dezenas)
+
+fct_count(dezenas$dezenas2, prop = TRUE) %>%
+  arrange(desc(n))
+
+ggplot(dezenas) +
+  geom_bar(aes(x = dezenas2, y = after_stat(prop), group = 1))
+
+
+```
+

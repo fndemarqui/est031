@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 
 Conjunto de dados e funções utilizados na disciplina Estatística e Probabilidades.
 
+
 ## Installation
 
 Você pode instalar a versão de desenvolvimento do pacote est031 a partir do [GitHub](https://github.com/) da seguinte forma: 

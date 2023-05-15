@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">est031</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.6</span>
       </span>
     </div>
 
@@ -25,6 +25,16 @@
       <ul class="nav navbar-nav"><li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
+      <a href="../articles/megasena.html">Explorando os resultados da mega-sena</a>
+    </li>
+  </ul></li>
       </ul><ul class="nav navbar-nav navbar-right"></ul></div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -44,43 +54,70 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">dnbinom2</span><span class="op">(</span><span class="va">x</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span>, log <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="fu">pnbinom2</span><span class="op">(</span><span class="va">q</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span>, lower.tail <span class="op">=</span> <span class="cn">TRUE</span>, log.p <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="fu">qnbinom2</span><span class="op">(</span><span class="va">p</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span>, lower.tail <span class="op">=</span> <span class="cn">TRUE</span>, log.p <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="fu">rnbinom2</span><span class="op">(</span><span class="va">n</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">dnbinom2</span><span class="op">(</span><span class="va">x</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span>, log <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">pnbinom2</span><span class="op">(</span><span class="va">q</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span>, lower.tail <span class="op">=</span> <span class="cn">TRUE</span>, log.p <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">qnbinom2</span><span class="op">(</span><span class="va">p</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span>, lower.tail <span class="op">=</span> <span class="cn">TRUE</span>, log.p <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rnbinom2</span><span class="op">(</span><span class="va">n</span>, <span class="va">size</span>, <span class="va">prob</span>, <span class="va">mu</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
 <dd><p>vector of (non-negative integer) quantiles.</p></dd>
+
+
 <dt>size</dt>
 <dd><p>total number of successful trials (failures + successes), or dispersion parameter (the shape parameter of the gamma mixing distribution). Must be strictly positive, need not be integer.</p></dd>
+
+
 <dt>prob</dt>
 <dd><p>probability of success in each trial. 0 &lt; prob &lt;= 1.</p></dd>
+
+
 <dt>mu</dt>
 <dd><p>alternative parametrization via mean: see ‘Details’.</p></dd>
+
+
 <dt>log, log.p</dt>
 <dd><p>logical; if TRUE, probabilities p are given as log(p).</p></dd>
+
+
 <dt>q</dt>
 <dd><p>vector of quantiles.</p></dd>
+
+
 <dt>lower.tail</dt>
 <dd><p>logical; if TRUE (default), probabilities are \(P[X \le x]\); otherwise, \(P[X &gt; x]\).</p></dd>
+
+
 <dt>p</dt>
 <dd><p>vector of probabilities.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>number of observations. If length(n) &gt; 1, the length is taken to be the number required.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>dnbinom2 gives the density, pnbinom2 gives the distribution function, qnbinom2 gives the quantile function, and rnbinom2 generates random deviates.
-Invalid size or prob will result in return value NaN, with a warning.
-The length of the result is determined by n for rnbinom2, and is the maximum of the lengths of the numerical arguments for the other functions.
-The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.
-rnbinom2 returns a vector of type <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> unless generated values exceed the maximum representable integer when <code><a href="https://rdrr.io/r/base/double.html" class="external-link">double</a></code> values are returned since R version 4.0.0.</p>
+    
+
+<p>dnbinom2 gives the density, pnbinom2 gives the distribution function, qnbinom2 gives the quantile function, and rnbinom2 generates random deviates.</p>
+
+
+<p>Invalid size or prob will result in return value NaN, with a warning.</p>
+
+
+<p>The length of the result is determined by n for rnbinom2, and is the maximum of the lengths of the numerical arguments for the other functions.</p>
+
+
+<p>The numerical arguments other than n are recycled to the length of the result. Only the first elements of the logical arguments are used.</p>
+
+
+<p>rnbinom2 returns a vector of type <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></code> unless generated values exceed the maximum representable integer when <code><a href="https://rdrr.io/r/base/double.html" class="external-link">double</a></code> values are returned since R version 4.0.0.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -107,7 +144,7 @@ for \(r &gt;0\)  and x = r, r+1, r+2, ...</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

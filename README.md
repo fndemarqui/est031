@@ -22,6 +22,7 @@ devtools::install_github("fndemarqui/est031")
 ## Exemplo
 
 ``` r
+
 # anexando os pacotes:
 library(est031)
 library(tidyverse)

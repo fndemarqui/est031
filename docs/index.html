@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">est031</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.6</span>
       </span>
     </div>
 
@@ -41,6 +41,18 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/megasena.html">Explorando os resultados da mega-sena</a>
+    </li>
+  </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
@@ -66,36 +78,37 @@
 </h2>
 <p>Você pode instalar a versão de desenvolvimento do pacote est031 a partir do <a href="https://github.com/" class="external-link">GitHub</a> da seguinte forma:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"fndemarqui/est031"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"fndemarqui/est031"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="exemplo">Exemplo<a class="anchor" aria-label="anchor" href="#exemplo"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># anexando os pacotes:</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">est031</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-
-<span class="co">#carregando/espiando os dados:</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span>    
-<span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 87,365</span>
-<span class="co">#&gt; Columns: 14</span>
-<span class="co">#&gt; $ idade       &lt;dbl&gt; 24, 17, 19, 19, 18, 24, 20, 30, 17, 19, 27, 32, 21, 20, 20…</span>
-<span class="co">#&gt; $ sexo        &lt;chr&gt; "F", "F", "F", "M", "F", "F", "F", "F", "F", "F", "M", "M"…</span>
-<span class="co">#&gt; $ est_civil   &lt;chr&gt; "NI", "solteiro", "divorciado", "solteiro", "solteiro", "s…</span>
-<span class="co">#&gt; $ raca        &lt;chr&gt; "pardo", "branco", "branco", "branco", "pardo", "amarelo",…</span>
-<span class="co">#&gt; $ escola      &lt;chr&gt; "não espondeu", "pública", "não espondeu", "não espondeu",…</span>
-<span class="co">#&gt; $ lingua_estr &lt;int&gt; 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1…</span>
-<span class="co">#&gt; $ nota_CN     &lt;dbl&gt; 500.1, 536.1, 616.8, 481.8, 457.7, NA, 410.0, 504.1, 561.6…</span>
-<span class="co">#&gt; $ nota_CH     &lt;dbl&gt; 548.5, 545.5, 636.8, 585.8, 491.6, NA, 505.4, 561.9, 620.2…</span>
-<span class="co">#&gt; $ nota_LC     &lt;dbl&gt; 561.3, 561.9, 612.6, 572.7, 549.4, NA, 464.9, 546.7, 632.8…</span>
-<span class="co">#&gt; $ nota_MT     &lt;dbl&gt; 476.8, 629.5, 735.7, 556.2, 413.8, NA, 445.7, 601.7, 635.1…</span>
-<span class="co">#&gt; $ nota_RD     &lt;int&gt; 620, 800, 840, 600, 620, NA, 0, 480, 880, NA, 440, 700, NA…</span>
-<span class="co">#&gt; $ ESC_pai     &lt;fct&gt; não, sim, sim, não, não, não, não, não, não, não, não, não…</span>
-<span class="co">#&gt; $ ESC_mae     &lt;fct&gt; não, sim, sim, não, não, não, não, não, não, não, não, não…</span>
-<span class="co">#&gt; $ renda_fam   &lt;chr&gt; "C", "J", "C", "D", "E", "M", "C", "C", "E", "B", "C", "C"…</span></code></pre></div>
+<code class="sourceCode R"><span></span>
+<span><span class="co"># anexando os pacotes:</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">est031</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#carregando/espiando os dados:</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span>    </span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">enem2019bh</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 87,365</span></span>
+<span><span class="co">#&gt; Columns: 14</span></span>
+<span><span class="co">#&gt; $ idade       &lt;dbl&gt; 24, 17, 19, 19, 18, 24, 20, 30, 17, 19, 27, 32, 21, 20, 20…</span></span>
+<span><span class="co">#&gt; $ sexo        &lt;chr&gt; "F", "F", "F", "M", "F", "F", "F", "F", "F", "F", "M", "M"…</span></span>
+<span><span class="co">#&gt; $ est_civil   &lt;chr&gt; "NI", "solteiro", "divorciado", "solteiro", "solteiro", "s…</span></span>
+<span><span class="co">#&gt; $ raca        &lt;chr&gt; "pardo", "branco", "branco", "branco", "pardo", "amarelo",…</span></span>
+<span><span class="co">#&gt; $ escola      &lt;chr&gt; "não espondeu", "pública", "não espondeu", "não espondeu",…</span></span>
+<span><span class="co">#&gt; $ lingua_estr &lt;int&gt; 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1…</span></span>
+<span><span class="co">#&gt; $ nota_CN     &lt;dbl&gt; 500.1, 536.1, 616.8, 481.8, 457.7, NA, 410.0, 504.1, 561.6…</span></span>
+<span><span class="co">#&gt; $ nota_CH     &lt;dbl&gt; 548.5, 545.5, 636.8, 585.8, 491.6, NA, 505.4, 561.9, 620.2…</span></span>
+<span><span class="co">#&gt; $ nota_LC     &lt;dbl&gt; 561.3, 561.9, 612.6, 572.7, 549.4, NA, 464.9, 546.7, 632.8…</span></span>
+<span><span class="co">#&gt; $ nota_MT     &lt;dbl&gt; 476.8, 629.5, 735.7, 556.2, 413.8, NA, 445.7, 601.7, 635.1…</span></span>
+<span><span class="co">#&gt; $ nota_RD     &lt;int&gt; 620, 800, 840, 600, 620, NA, 0, 480, 880, NA, 440, 700, NA…</span></span>
+<span><span class="co">#&gt; $ ESC_pai     &lt;fct&gt; não, sim, sim, não, não, não, não, não, não, não, não, não…</span></span>
+<span><span class="co">#&gt; $ ESC_mae     &lt;fct&gt; não, sim, sim, não, não, não, não, não, não, não, não, não…</span></span>
+<span><span class="co">#&gt; $ renda_fam   &lt;chr&gt; "C", "J", "C", "D", "E", "M", "C", "C", "E", "B", "C", "C"…</span></span></code></pre></div>
 </div>
 </div>
   </div>
@@ -137,7 +150,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

@@ -6,3 +6,4 @@
 ^docs$
 ^pkgdown$
 ^app_tlc_prop\.R$
+^inst/stuff$
